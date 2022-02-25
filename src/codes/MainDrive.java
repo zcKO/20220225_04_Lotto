@@ -71,12 +71,32 @@ public class MainDrive {
         }
 
 //        임시 당첨번호 => 당첨 등수 로직 테스트용
-        winNumbers[0] = 10;
-        winNumbers[1] = 11;
-        winNumbers[2] = 20;
-        winNumbers[3] = 21;
-        winNumbers[4] = 30;
-        winNumbers[5] = 31;
+//        winNumbers[0] = 10;
+//        winNumbers[1] = 11;
+//        winNumbers[2] = 20;
+//        winNumbers[3] = 21;
+//        winNumbers[4] = 30;
+//        winNumbers[5] = 31;
+
+//        랜덤으로 만들어진 당첨 / 번호들을 > 작은 수 ~ 큰 수로 정리
+        for (int i = 0; i < winNumbers.length; i++) {
+
+            for (int j = 0; j < winNumbers.length - 1; j++) {
+
+                if (winNumbers[j] > winNumbers[j + 1]) {
+
+                    int backup = winNumbers[j];
+                    winNumbers[j] = winNumbers[j + 1];
+                    winNumbers[j + 1] = backup;
+
+                }
+
+            }
+
+        }
+
+//        정리 된 당첨번호 확인
+
 
         for (int num : winNumbers) {
             System.out.println(num);
