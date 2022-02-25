@@ -52,7 +52,7 @@ public class MainDrive {
 
                 boolean isDuplOk = true;
 
-                for (int num: winNumbers) {
+                for (int num : winNumbers) {
 
                     if (num == randomNum) {
                         isDuplOk = false;
@@ -78,10 +78,18 @@ public class MainDrive {
         winNumbers[4] = 30;
         winNumbers[5] = 31;
 
-        for (int num: winNumbers) {
+        for (int num : winNumbers) {
             System.out.println(num);
         }
 
+        int correctCount = 0;
+
+        for (int myNum : myNumbers) {
+            for (int winNum : winNumbers) {
+                correctCount++;
+            }
+        }
+        
 
     }
 
