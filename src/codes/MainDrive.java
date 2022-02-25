@@ -70,6 +70,29 @@ public class MainDrive {
 
         }
 
+//        보너스 번호 뽑기
+//        제약 사항 : 1 ~ 45 중 한, 기존의 당첨 번호와 중복되면 안된다.
+        int bonusNum = 0;
+
+        while (true) {
+            int randomNum = (int) (Math.random() * 45 + 1);
+
+            boolean isDuplOk = true;
+
+            for (int num: winNumbers) {
+                if (randomNum == num) {
+                    isDuplOk = false;
+                    break;
+                }
+            }
+
+            if (isDuplOk) {
+                bonusNum = randomNum;
+                break;
+            }
+
+        }
+
 //        임시 당첨번호 => 당첨 등수 로직 테스트용
 //        winNumbers[0] = 10;
 //        winNumbers[1] = 11;
@@ -96,8 +119,6 @@ public class MainDrive {
         }
 
 //        정리 된 당첨번호 확인
-
-
         for (int num : winNumbers) {
             System.out.println(num);
         }
