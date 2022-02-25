@@ -11,7 +11,7 @@ public class MainDrive {
 
         int[] myNumbers = new int[6];
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < myNumbers.length; i++) {
 
             while (true) {
 
@@ -39,6 +39,20 @@ public class MainDrive {
 
         }
         myScanner.close();
+
+        int[] winNumbers = new int[6];
+
+        for (int i = 0; i < winNumbers.length; i++) {
+
+            while (true) {
+//                0 <= 랜덤 값을 < 1
+//                * 45 + 1 :  1 <= (랜덤 값 * 45 + 1) < 46
+//                Random class 를 사용해도 된다.
+                int randomNum = (int) (Math.random() * 45 + 1);
+
+            }
+
+        }
 
     }
 
