@@ -123,6 +123,11 @@ public class MainDrive {
             System.out.println(num);
         }
 
+//        보너스 번호도 확인
+        System.out.println("보너스 번호 : " + bonusNum);
+
+//        맞춘 갯 수 확인
+
         int correctCount = 0;
 
         for (int myNum : myNumbers) {
@@ -133,11 +138,12 @@ public class MainDrive {
             }
         }
 
+//        등수 확인
         if (correctCount == 6) {
             System.out.println("1등");
         } else if (correctCount == 5) {
-//            보너스 번호 로직 추가 필요
-            System.out.println("임시 - 3등");
+//            보너스 번호 로직
+
         } else if (correctCount == 4) {
             System.out.println("4등");
         } else if (correctCount == 3) {
